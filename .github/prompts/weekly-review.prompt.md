@@ -23,7 +23,7 @@ Turn the last week of activity into practical lessons and a short improvement pl
    - focus (0-10)
    - wellbeing (0-10)
 5. Write the result in Markdown and save or append to:
-   - `journals/DD-MM-YYYY-weekly-review.md`
+   - `journals/YYYY-MM-DD/weekly-review.md`
 6. Version the updated Markdown file in git with commit format:
    - `journal: YYYY-MM-DD HH:mm [branch:<name>] - weekly review #journal #weekly-review`
 

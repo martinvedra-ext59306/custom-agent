@@ -41,6 +41,6 @@ Always return:
 
 ## Storage and Versioning
 - Save analysis in Markdown under `journals/`.
-- Suggested filename: `DD-MM-YYYY-habit-analysis.md`.
+- Suggested filename: `YYYY-MM-DD/habit-analysis.md`.
 - After updates, stage only changed journal files and commit with:
   - `journal: YYYY-MM-DD HH:mm [branch:<name>] - habit analysis #journal #habit-analysis`

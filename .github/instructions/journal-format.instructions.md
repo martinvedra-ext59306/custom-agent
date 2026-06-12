@@ -7,9 +7,9 @@ applyTo: "journals/**/*.md"
 Use these rules whenever writing or updating a journal file.
 
 ## File Naming
-- Use this pattern for new files: `DD-MM-YYYY-[main-thought].md`
+- Use this folder pattern for new entries: `journals/YYYY-MM-DD/[main-thought].md`
 - Keep `[main-thought]` short, lower-case, and hyphenated.
-- Example: `12-06-2026-focus-and-recovery.md`
+- Example: `journals/2026-06-12/focus-and-recovery.md`
 
 ## Entry Structure
 For each new entry, append a section in this exact order:
