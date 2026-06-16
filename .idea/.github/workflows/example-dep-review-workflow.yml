@@ -1,0 +1,40 @@
+name: Dependency Review Proxy Test
+
+on:
+  pull_request:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  dep-review-proxy-test:
+    name: Dependency Review (Fork Debug)
+    # Adjust to your runner labels if needed
+    runs-on: csas-linux
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Proxy env diagnostics
+        shell: bash
+        run: |
+          echo "HTTP_PROXY=${HTTP_PROXY:-<empty>}"
+          echo "HTTPS_PROXY=${HTTPS_PROXY:-<empty>}"
+          echo "NO_PROXY=${NO_PROXY:-<empty>}"
+          echo "http_proxy=${http_proxy:-<empty>}"
+          echo "https_proxy=${https_proxy:-<empty>}"
+          echo "no_proxy=${no_proxy:-<empty>}"
+
+      - name: Dependency Review (fork debug)
+        uses: martinvedra-ext59306/dependency-review-action@proxy-debug-scorecard
+        with:
+          # Keep true for the exact failing path (scorecards + deps.dev)
+          show_openssf_scorecard: true
+          # Optional: keep defaults explicit for readability
+          vulnerability_check: true
+          license_check: true
