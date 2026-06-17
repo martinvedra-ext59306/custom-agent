@@ -20,5 +20,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Dependency Review
-        uses: actions/dependency-review-action@v5
+        uses: martinvedra-ext59306/dependency-review-action@proxy-debug-scorecard
 
